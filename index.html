@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en">
+    <head>
+        <title>SPA Development 101: Simple Calculator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div ng-app="calculator" ng-controller="CalcController as calc">
+            <div>
+                <h1>Simple Calculator</h1>
+                <div>
+                    <label>Enter First Number:</label>
+                    <input type="number" ng-model="calc.num1">
+                </div>
+                <div>
+                    <label>Enter Second Number:</label>
+                    <input type="number" ng-model="calc.num2">
+                </div>
+                <div>
+                    <h3>Add:</h3>{{ calc.add() }}
+                </div>
+                <div>
+                    <h3>Multiply:</h3>{{ calc.multiply() }}
+                </div>
+                <div>
+                    <h3>Divide:</h3>{{ calc.divide() }}
+                </div>
+                <div>
+                    <h3>Subtract:</h3>{{ calc.subtract() }}
+                </div>
+            </div>
+        </div>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="assets/js/SimpleService.js"></script>
+        <script src="assets/js/SimpleController.js"></script>        
+    </body>
+</html>
