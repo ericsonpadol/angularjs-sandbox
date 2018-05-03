@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div ng-app="students">
+            <div ng-controller="GirlController">
+                <br>
+                <input type="text" ng-model="girl">
+                <button ng-click="addGirl()">
+                    Add Girl
+                </button>
+                <br>
+            </div>
+            <div ng-controller="BoyController as boyCon">
+                <br>
+                <input type="text" ng-model="addBoy()">
+                <button ng-click="addBoy()">
+                    Add Boy
+                </button>
+                <br>
+            </div>
+            <div ng-controller="DisplayController as displayCon">
+                <button ng-click="displayStudents()">
+                    Display Students
+                </button>
+            </div>
+        </div>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="assets/js/studentsModule.js"></script>
+        <script src="assets/js/studentController.js"></script>
+    </body>    
+</html>
