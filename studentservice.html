@@ -20,15 +20,15 @@ and open the template in the editor.
                 </button>
                 <br>
             </div>
-            <div ng-controller="BoyController as boyCon">
+            <div ng-controller="BoyController">
                 <br>
-                <input type="text" ng-model="addBoy()">
+                <input type="text" ng-model="boy">
                 <button ng-click="addBoy()">
                     Add Boy
                 </button>
                 <br>
             </div>
-            <div ng-controller="DisplayController as displayCon">
+            <div ng-controller="DisplayController">
                 <button ng-click="displayStudents()">
                     Display Students
                 </button>
@@ -38,7 +38,8 @@ and open the template in the editor.
         <script src="bower_components/angular-animate/angular-animate.js"></script>
         <script src="bower_components/angular-cookies/angular-cookies.js"></script>
         <script src="bower_components/angular-route/angular-route.js"></script>
-        <script src="assets/js/studentsModule.js"></script>
+        <script src="assets/js/studentsModule.js"></script>        
         <script src="assets/js/studentController.js"></script>
+        <script src="assets/js/StudentService.js"></script>
     </body>    
 </html>
