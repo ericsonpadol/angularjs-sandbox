@@ -10,17 +10,28 @@ var candidateApp = angular.module('candidates', []);
 candidateApp.controller('CandidateController',[
     '$scope',
     function($scope) {
-        $scope.candidate = {
+        $scope.donald = {
             name: 'Donald Trump',
             party: 'Republican',
             spouse: 'Melania Trump'
         };
+        
+        $scope.hillary = {
+            name: 'Hillary Clinton',
+            party: 'Democrat',
+            spouse: 'Bill Clinton'
+        };        
     }
 ]);
 
 candidateApp.directive('customCandidate', function(){
     return {
-        templateUrl: 'assets/js/components/candidate-demo.html'
+        restrict: 'E',        
+        templateUrl: 'assets/js/components/candidate-demo.html',
+        scope: {
+            candidate: '=candidateInfo',
+            candidateInfo: '='
+        }
     };
 });
 
